@@ -11,10 +11,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Django_Test',  # Or path to database file if using sq
-        'USER': 'mfriend',                      # Not used with sqlite3.
-        'PASSWORD': 'Nonesuch1',                  # Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':'/home/michaelfriend/django_project/Django_Three/test_django_database.db',  # Or path to database file if using sq
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
