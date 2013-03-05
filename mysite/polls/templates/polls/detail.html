@@ -1,0 +1,11 @@
+{%if poll %}
+	<ul>
+        
+	 <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
+        
+        
+{% else %}
+        <p>sorry poll does not exist!.</p>
+{% endif %}
+
+
