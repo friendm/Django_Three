@@ -1,5 +1,5 @@
 # Django settings for mysite project.
-
+from personal_settings import BASE_PATH
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':'/home/michaelfriend/django_project/Django_Three/test_django_database.db',  # Or path to database file if using sq
+        'NAME':BASE_PATH,  # Or path to database file if using sq
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
