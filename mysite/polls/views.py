@@ -1,6 +1,6 @@
 #Create your views here.
 
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.http import Http404
 from django.shortcuts import render,get_object_or_404
 from django.template import Context,loader
@@ -36,6 +36,7 @@ def vote(request,poll_id):
 		return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
 
 def results(request,poll_id):
-	return HttpResponse("you're looking at the results of poll %s" % poll_id)
+	poll=get_object_or_404(Poll,pk=poll_id)
+	return render(request,'polls/detail.html', {'poll':poll})
 
 
