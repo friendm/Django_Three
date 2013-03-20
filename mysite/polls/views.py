@@ -6,8 +6,7 @@ from django.shortcuts import render,get_object_or_404
 from django.template import Context,loader
 from polls.models import Choice,Poll
 from django.core.urlresolvers import reverse
-
-
+"""
 def index(request):
 	latest_poll_list=Poll.objects.order_by('-pub_date')[:2]
 	template= loader.get_template('polls/first_template.html')
@@ -18,7 +17,7 @@ def index(request):
 def detail(request,poll_id):
 	poll=get_object_or_404(Poll,pk=poll_id)
 	return render(request,'polls/detail.html', {'poll':poll})
-
+"""
 def vote(request,poll_id):
 	#this assigns the opject to p based on the value that is passed via the web url
 	p=get_object_or_404(Poll,pk=poll_id)
@@ -34,9 +33,9 @@ def vote(request,poll_id):
 		# with POST data. This prevents data from being posted twice if a
 		# user hits the Back button.
 		return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
-
+"""
 def results(request,poll_id):
 	poll=get_object_or_404(Poll,pk=poll_id)
 	return render(request,'polls/detail.html', {'poll':poll})
 
-
+"""
