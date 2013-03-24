@@ -7,11 +7,12 @@ class Schools(models.Model):
 	def __unicode__(self): #this names the variable for the admin site
 		Unique =self.Name+self.City 
 		return Unique
+	
 	def is_unique(self,Name,City):
 		Name_List = models.Schools.objects.values('Name').distinct()
 		City_List = models.Schools.objects.values('City').distinct()
 		
-		if Name_List.index(Name)==True & City_List.index(City):
+		if Name_List.index(Name)==True & City_List.index(City)==True:
 			return False
 		else:
 			return True
