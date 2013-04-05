@@ -1,5 +1,9 @@
 from django.db import models
 
+import sys
+
+sys.dont_write_bytecode = True
+
 class Schools(models.Model):
 	Name = models.CharField("Name of School", max_length = 50)
 	City = models.CharField("City", max_length = 50)

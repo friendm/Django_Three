@@ -12,18 +12,6 @@ class Schools(models.Model):
 		Unique =self.Name+self.City 
 		return Unique
 	
-	def is_unique(self,Name,City):
-		Name_List = models.Schools.objects.values('Name').distinct()
-		City_List = models.Schools.objects.values('City').distinct()
-		
-		if Name_List.index(Name)==True & City_List.index(City)==True:
-			return False
-		else:
-			return True
-			
-		
-			
-
 class Users(models.Model):
 	Username = models.CharField("Username", max_length = 50)
 	Password = models.CharField("Password", max_length = 50)
