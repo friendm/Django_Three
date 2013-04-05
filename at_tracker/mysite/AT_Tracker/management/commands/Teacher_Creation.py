@@ -14,7 +14,7 @@ class Command(BaseCommand):
         with open(path) as f:
             reader = csv.reader(f)
             for row in reader:
-                _, created = Schools.objects.get_or_create(
+                _, created = School.objects.get_or_create(
                     name=row[0],
                     city=row[1])
                 # creates a tuple of the new object or
