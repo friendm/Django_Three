@@ -1,10 +1,10 @@
 from django.contrib import admin
-from AT_Tracker.models import Users,Schools,Students,Teacher,Grade,Classes
+from AT_Tracker.models import user,school,student,teacher,grade,subject
 
-admin.site.register(Users)
-admin.site.register(Schools)
-admin.site.register(Students)
-admin.site.register(Teacher)
-admin.site.register(Grade)
-admin.site.register(Classes)
+admin.site.register(user)
+admin.site.register(school)
+admin.site.register(student)
+admin.site.register(teacher)
+admin.site.register(grade)
+admin.site.register(subject)
 

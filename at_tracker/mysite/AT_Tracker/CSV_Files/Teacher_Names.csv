@@ -1,22 +1,19 @@
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-First Name,Last Name,Middle Name,School,,,,,,,,,
-Tyrion,Lannister,Dothraki,Village CollegeGreenTon,,,,,,,,,
-Tyrion,Frey,Maester,Cat ElementaryGreenBerg,,,,,,,,,
-Eddard,Tyrell,Spring,Village CollegeChiSuburbia,,,,,,,,,
-Tyrion,Tyrell,Spring,Cat ElementaryWashTon,,,,,,,,,
-Eddard,Tyrell,Drowned,Village CollegeBlueTown,,First_Name,,Last_Name,1,Dragon,,1,Town
-Eddard,Lannister,Snow,Tree SeminaryBlueBerg,1,Little Finger,1,Lannister,2,Snow,,2,Village
-Hound,Lannister,Spring,Rock CollegeGreenSuburbia,2,Hound,2,Arryn,3,Spring,,3,Berg
-Little Finger,Frey,Maester,Django CollegeChiVillage,3,Eddard,3,Tully,4,Maester,,4,Ton
-Eddard,Frey,Dragon,Rock CollegeGreenBerg,4,Tyrion,4,Frey,5,Drowned,,5,Suburbia
-Little Finger,Tyrell,Dragon,Village CollegeWhiteTown,5,Sansa,5,Tyrell,6,Dothraki,,,
-Eddard,Frey,Dragon,Cat CollegeGreenTon,,,6,Stark,,,,,
-Hound,Lannister,Maester,Django SeminaryWashSuburbia,,,,,,,,,
-Tyrion,Tully,Dragon,Village CollegeWhiteSuburbia,,,,,,,,,
-Little Finger,Arryn,Drowned,Rock SchoolWashTon,,,,,,,,,
-Sansa,Frey,Spring,Cat SchoolGreenSuburbia,,,,,,,,,
-Sansa,Lannister,Drowned,Cat CollegeChiVillage,,,,,,,,,
-Eddard,Tyrell,Drowned,Django HighGreenVillage,,,,,,,,,
-Eddard,Lannister,Maester,Django ElementaryWhiteTon,,,,,,,,,
-Hound,Tully,Dothraki,Cat ElementaryGreenTown,,,,,,,,,
+Tyrion	Lannister	Dothraki	Village CollegeGreenTon									
+Tyrion	Frey	Maester	Cat ElementaryGreenBerg									
+Eddard	Tyrell	Spring	Village CollegeChiSuburbia									
+Tyrion	Tyrell	Spring	Cat ElementaryWashTon									
+Eddard	Tyrell	Drowned	Village CollegeBlueTown									
+Eddard	Lannister	Snow	Tree SeminaryBlueBerg									
+Hound	Lannister	Spring	Rock CollegeGreenSuburbia									
+Little Finger	Frey	Maester	Django CollegeChiVillage		First_Name		Last_Name	1	Dragon		1	Town
+Eddard	Frey	Dragon	Rock CollegeGreenBerg	1	Little Finger	1	Lannister	2	Snow		2	Village
+Little Finger	Tyrell	Dragon	Village CollegeWhiteTown	2	Hound	2	Arryn	3	Spring		3	Berg
+Eddard	Frey	Dragon	Cat CollegeGreenTon	3	Eddard	3	Tully	4	Maester		4	Ton
+Hound	Lannister	Maester	Django SeminaryWashSuburbia	4	Tyrion	4	Frey	5	Drowned		5	Suburbia
+Tyrion	Tully	Dragon	Village CollegeWhiteSuburbia	5	Sansa	5	Tyrell	6	Dothraki			
+Little Finger	Arryn	Drowned	Rock SchoolWashTon			6	Stark					
+Sansa	Frey	Spring	Cat SchoolGreenSuburbia									
+Sansa	Lannister	Drowned	Cat CollegeChiVillage									
+Eddard	Tyrell	Drowned	Django HighGreenVillage									
+Eddard	Lannister	Maester	Django ElementaryWhiteTon									
+Hound	Tully	Dothraki	Cat ElementaryGreenTown									

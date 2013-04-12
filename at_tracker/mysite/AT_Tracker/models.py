@@ -14,10 +14,10 @@ class school(models.Model):
 class user(models.Model):
     Username = models.CharField("Username", max_length=50)
     Password = models.CharField("Password", max_length=50)
-    School = models.ForeignKey(schools)
+    School = models.ForeignKey(school)
 
     def __unicode__(self):  # this names the variable for the admin site
-        return self.Username
+        return self.School
 
 
 class grade(models.Model):
@@ -48,14 +48,14 @@ class teacher(models.Model):
     School = models.ForeignKey(school)
 
     def __unicode__(self):  # this names the variable for the admin site
-        Unique_Name = self.First_Name+self.Last_Name+self.Middle_Name+self.School
-        return Unique_Name
+        return '%s %s %s' %(unicode(self.School), self.First_Name,self.Last_Name)
+        # the foriegn key needs to be added with the unicode method
+        # in order for Django to recognize it
 
-
-class class(models.Model):
+class subject(models.Model):
     Name = models.CharField("Name of Class", max_length=50)
     Grade = models.ForeignKey(grade)
-    School = models.ForeignKey(schools)
+    School = models.ForeignKey(school)
     Teachers = models.ManyToManyField(teacher)
 
     def __unicode__(self):  # this names the variable for the admin site
