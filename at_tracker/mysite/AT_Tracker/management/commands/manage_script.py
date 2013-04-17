@@ -2,9 +2,10 @@ from django.core.management.base import BaseCommand,CommandError
 from django.core.management import call_command
 import os
 import sys
+import Counter from Local_Settings.py
 
 SETTINGS_PATH = os.path.abspath(__file__)
-for i in range(5):
+for i in range(Counter):
     SETTINGS_PATH = os.path.dirname(SETTINGS_PATH)
 sys.path.insert(0, os.path.join(SETTINGS_PATH, 'mysite'))
 

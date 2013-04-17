@@ -25,7 +25,6 @@ class Command(BaseCommand):
 				query_1=school.objects.get(Name__iexact=School_Name,City__iexact=School_Location)
 				#find the object in the database
 				pk_q1= query_1.id
-				#pk of school
 				print pk_q1
 				_, created = teacher.objects.get_or_create(
 					First_Name=First_Name,
