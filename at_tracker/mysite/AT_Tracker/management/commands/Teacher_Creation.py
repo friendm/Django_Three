@@ -5,14 +5,14 @@ from django.core.management.base import CommandError
 
 from AT_Tracker.models import school
 
+from Local_Settings import CSV_Location
 
 class Command(BaseCommand):
     help = 'generates list of schools from csv'
     
     def handle(self, *args, **options):
-        path = '/home/mike/python_projects/Django_3/django_projects'
-        path = path + '/at_tracker/mysite/AT_Tracker/CSV_Files/'
-        filename = 'Schools_List.csv'
+        path = CSV_Location
+        filename = '/Schools_List.csv'
         path = path + filename
         with open(path) as f:
             reader = csv.reader(f)

@@ -5,14 +5,14 @@ from django.core.management.base import CommandError
 
 from AT_Tracker.models import teacher,school
 
+from Local_Settings import CSV_Location
 
 class Command(BaseCommand):
     help = 'generates list of schools from csv'
     
     def handle(self, *args, **options):
-        path = '/home/mike/python_projects/Django_3/django_projects'
-        path = path + '/at_tracker/mysite/AT_Tracker/CSV_Files/'
-        filename = 'Teacher_Name1.csv'
+        path = CSV_Location
+        filename = '/Teacher_Name1.csv'
         path = path + filename
         with open(path) as f:
             reader = csv.reader(f)
@@ -24,14 +24,14 @@ class Command(BaseCommand):
 				School_Location=row[4]
 				query_1=school.objects.get(Name__iexact=School_Name,City__iexact=School_Location)
 				#find the object in the database
-				pk_q1= query_1.id
+				#pk_q1= query_1.id
 				#pk of school
-				print pk_q1
+				#print pk_q1
 				_, created = teacher.objects.get_or_create(
 					First_Name=First_Name,
 					Last_Name=Last_Name,
 					Middle_Name=Middle_Name,
-					School=pk_q1
+					School=query_1
 					#uses the primary key of the school to add teacher object with foreign key
                     )
                 # creates a tuple of the new object or
