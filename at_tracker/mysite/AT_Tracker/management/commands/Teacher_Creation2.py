@@ -8,7 +8,7 @@ from AT_Tracker.models import teacher,school
 from Local_Settings import CSV_Location
 
 class Command(BaseCommand):
-    help = 'generates list of schools from csv'
+    help = 'generates list of teachers from CSV'
     
     def handle(self, *args, **options):
         path = CSV_Location
@@ -22,16 +22,13 @@ class Command(BaseCommand):
 				Middle_Name=row[2]
 				School_Name=row[3]
 				School_Location=row[4]
-				query_1=school.objects.get(Name__iexact=School_Name,City__iexact=School_Location)
+				School_1=school.objects.get(Name__iexact=School_Name,City__iexact=School_Location)
 				#find the object in the database
-				#pk_q1= query_1.id
-				#pk of school
-				#print pk_q1
 				_, created = teacher.objects.get_or_create(
 					First_Name=First_Name,
 					Last_Name=Last_Name,
 					Middle_Name=Middle_Name,
-					School=query_1
+					School=School_1_1
 					#uses the primary key of the school to add teacher object with foreign key
                     )
                 # creates a tuple of the new object or
