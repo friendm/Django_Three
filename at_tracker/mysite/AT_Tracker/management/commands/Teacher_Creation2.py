@@ -17,18 +17,18 @@ class Command(BaseCommand):
         with open(path) as f:
             reader = csv.reader(f)
             for row in reader:
-				First_Name=row[0],
-				Last_Name=row[1],
-				Middle_Name=row[2]
-				School_Name=row[3]
-				School_Location=row[4]
+				First_Name = row[0],
+				Last_Name = row[1],
+				Middle_Name = row[2]
+				School_Name = row[3]
+				School_Location = row[4]
 				School_1=school.objects.get(Name__iexact=School_Name,City__iexact=School_Location)
 				#find the object in the database
 				_, created = teacher.objects.get_or_create(
-					First_Name=First_Name,
-					Last_Name=Last_Name,
-					Middle_Name=Middle_Name,
-					School=School_1_1
+					First_Name = First_Name,
+					Last_Name = Last_Name,
+					Middle_Name = Middle_Name,
+					School = School_1
 					#uses the primary key of the school to add teacher object with foreign key
                     )
                 # creates a tuple of the new object or

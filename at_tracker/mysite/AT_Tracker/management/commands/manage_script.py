@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand,CommandError
 from django.core.management import call_command
 import os
 import sys
-import Counter from Local_Settings.py
+from Local_Settings import Counter
 
 SETTINGS_PATH = os.path.abspath(__file__)
 for i in range(Counter):
@@ -22,7 +22,7 @@ class Command(BaseCommand):
 		path = BASE_PATH
 		
 		if os.path.exists(path):
-			open(path,'w').close()
+			open(path,'a').close()
 		call_command('syncdb',interactive=False)
 			
 	

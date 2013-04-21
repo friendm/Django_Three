@@ -7,7 +7,7 @@ class school(models.Model):
     City = models.CharField("City", max_length=50)
 
     def __unicode__(self):  # this names the variable for the admin site
-        Unique = self.Name+self.City
+        Unique = self.Name + "--" + self.City
         return Unique
 
 
@@ -17,7 +17,10 @@ class user(models.Model):
     School = models.ForeignKey(school)
 
     def __unicode__(self):  # this names the variable for the admin site
-        return self.School
+        Unique_Name = self.Username + "--" + self.Password + "--"
+        School = str(self.School)
+        Unique_Name = Unique_Name + School
+        return Unique_Name
 
 
 class grade(models.Model):
@@ -25,7 +28,9 @@ class grade(models.Model):
     School = models.ForeignKey(school)
 
     def __unicode__(self):  # this names the variable for the admin site
-        Unique_Name = self.Grade_Level+self.School
+        Grade = str(self.Grade_Level)
+        Schools = str(self.School)
+        Unique_Name = Grade + "--" + Schools
         return Unique_Name	
 
 
@@ -37,7 +42,8 @@ class student(models.Model):
     Grade = models.ForeignKey(grade)
 
     def __unicode__(self):  # this names the variable for the admin site
-        Unique_Name = self.First_Name+self.Last_Name+self.School+self.Grade
+        Unique_Name = self.First_Name + "--"
+        Unique_Name = Unique_Name + self.Last_Name + "--" + self.School + "--" + self.Grade 
         return Unique_Name
 
 
@@ -48,16 +54,17 @@ class teacher(models.Model):
     School = models.ForeignKey(school)
 
     def __unicode__(self):  # this names the variable for the admin site
-        return '%s %s %s' %(unicode(self.School), self.First_Name,self.Last_Name)
+        return '%s %s %s %s %s' % (unicode(self.School), "--", self.First_Name, "--", self.Last_Name)
         # the foriegn key needs to be added with the unicode method
         # in order for Django to recognize it
 
-class subject(models.Model):
+
+class subject(models.Model):  
     Name = models.CharField("Name of Class", max_length=50)
     Grade = models.ForeignKey(grade)
     School = models.ForeignKey(school)
     Teachers = models.ManyToManyField(teacher)
 
     def __unicode__(self):  # this names the variable for the admin site
-        Unique_Name = self.Name+self.School
+        Unique_Name = self.Name + "--" + self.School
         return Unique_Name
