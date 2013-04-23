@@ -2,6 +2,7 @@ from django.db import models
 import sys
 
 
+
 class school(models.Model):
     Name = models.CharField("Name of School", max_length=50)
     City = models.CharField("City", max_length=50)
@@ -68,3 +69,18 @@ class subject(models.Model):
     def __unicode__(self):  # this names the variable for the admin site
         Unique_Name = self.Name + "--" + self.School
         return Unique_Name
+        
+
+class attendence(models.Model):  
+    Date = models.CharField("Date", max_length=50)
+    """Grade = models.ForeignKey(grade)
+    School = models.ForeignKey(school)
+    Subject = models.ForeignKey(subject)
+    Student = models.ForeignKey(student)
+"""
+    def __unicode__(self):  # this names the variable for the admin site
+        Unique_Name = self.Date + "--" """+ self.Grade + "--" + self.Student"""
+        return Unique_Name
+        
+
+

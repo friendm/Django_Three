@@ -22,7 +22,7 @@ class Command(BaseCommand):
 		path = BASE_PATH
 		
 		if os.path.exists(path):
-			open(path,'a').close()
+			open(path,'w').close()
 		call_command('syncdb',interactive=False)
 			
 	
