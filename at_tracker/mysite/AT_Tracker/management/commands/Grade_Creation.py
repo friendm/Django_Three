@@ -17,8 +17,7 @@ class Command(BaseCommand):
         with open(path) as f:
             reader = csv.reader(f, delimiter=",")
             for row in reader:
-                Grade = row[0]
-                Grade = string_clean(Grade)
+                Grade = string_clean(row[0[)
                 School_Name = row[1]
                 School_Location = row[2]
                 School_1 = school.objects.get(Name__iexact=School_Name, City__iexact=School_Location)

@@ -43,9 +43,9 @@ class student(models.Model):
     Grade = models.ForeignKey(grade)
 
     def __unicode__(self):  # this names the variable for the admin site
-        Unique_Name = self.First_Name + "--"
-        Unique_Name = Unique_Name + self.Last_Name + "--" + self.School + "--" + self.Grade 
-        return Unique_Name
+        Unique_Name = self.First_Name + "--" + self.Middle_Name + "--"
+        Unique_Name = Unique_Name + self.Last_Name
+        return '%s %s %s %s %s' % (unicode(self.School), "--", Unique_Name, "--", unicode(self.Grade))
 
 
 class teacher(models.Model):
@@ -73,13 +73,13 @@ class subject(models.Model):
 
 class attendence(models.Model):  
     Date = models.CharField("Date", max_length=50)
-    """Grade = models.ForeignKey(grade)
+    Grade = models.ForeignKey(grade)
     School = models.ForeignKey(school)
     Subject = models.ForeignKey(subject)
     Student = models.ForeignKey(student)
-"""
+
     def __unicode__(self):  # this names the variable for the admin site
-        Unique_Name = self.Date + "--" """+ self.Grade + "--" + self.Student"""
+        Unique_Name = self.Date + "--" + self.Grade + "--" + self.Student
         return Unique_Name
         
 
